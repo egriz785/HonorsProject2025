@@ -1,0 +1,4 @@
+#!/bin/bash
+g++ LCDApp.cpp display/LCDCharacterDisplay.cpp bus/SPIDevice.cpp bus/BusDevice.cpp -o LCDApp
+g++ LCDScroll.cpp display/LCDCharacterDisplay.cpp bus/SPIDevice.cpp bus/BusDevice.cpp -o LCDScroll
+./set_pins

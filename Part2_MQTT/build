@@ -1,0 +1,4 @@
+#!/bin/bash
+g++ publish.cpp -o publish -lpaho-mqtt3c
+g++ subscribe.cpp display/LCDCharacterDisplay.cpp bus/SPIDevice.cpp bus/BusDevice.cpp -o subscribe -lpaho-mqtt3c
+./set_pins

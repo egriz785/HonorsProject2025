@@ -1,0 +1,11 @@
+Some changes that we had to make to get this all to work:
+(Both of these are reflected in the report)
+
+1) Moved to spidev0.0, which means we changed GPIO pins from the version in the book:
+  SPI1_CS0  (p9.28) -> SPI0_CS0  (p9.17)
+  SPI1_D1   (p9.30) -> SPI0_D1   (p9.18)
+  SPI1_SCLK (p9.31) -> SPI0_SCLK (p9.22)
+
+2) Changed how the classes are built:
+  He was using .so (shared object) and .a (static libraries) files, but they kept throwing errors so we just copied the relevant files from
+  exploringBB/library/display and exploringBB/library/bus instead, that made it much easier
